@@ -1,0 +1,145 @@
+:root {
+  --neon-roxo: #8a2be2;
+  --neon-azul: #00d2ff;
+  --fundo-escuro: #0f0f13;
+}
+
+body {
+  margin: 0; padding: 0; height: 100vh; display: flex;
+  justify-content: center; align-items: center;
+  background-color: var(--fundo-escuro);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white; overflow: hidden;
+}
+
+.background-orbs {
+  position: absolute; width: 300px; height: 300px;
+  background: radial-gradient(circle, var(--neon-roxo) 0%, rgba(138,43,226,0) 70%);
+  top: 10%; left: 15%; filter: blur(60px); z-index: -1;
+  animation: flutuar 6s infinite alternate;
+}
+
+.background-orbs::after {
+  content: ''; position: absolute; width: 250px; height: 250px;
+  background: radial-gradient(circle, var(--neon-azul) 0%, rgba(0,210,255,0) 70%);
+  bottom: -150%; right: -150%; filter: blur(50px);
+}
+
+@keyframes flutuar {
+  0% { transform: translateY(0px) scale(1); }
+  100% { transform: translateY(30px) scale(1.1); }
+}
+
+.glass-container {
+  background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px; padding: 40px; width: 320px; text-align: center;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); transition: all 0.3s ease;
+}
+
+.dashboard-wide { width: 500px; padding: 30px; }
+h1 { margin-top: 0; font-size: 26px; letter-spacing: 1px; }
+p { color: #b3b3b3; font-size: 14px; margin-bottom: 30px; }
+
+.dashboard-header {
+  display: flex; justify-content: space-between; align-items: center;
+  text-align: left; border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 15px; margin-bottom: 20px;
+}
+.dashboard-header h1 { margin-bottom: 5px; }
+.dashboard-header p { margin-bottom: 0; }
+
+input[type="password"], input[type="text"] {
+  width: 100%; padding: 12px; margin-bottom: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 8px;
+  background: rgba(0, 0, 0, 0.3); color: white; outline: none;
+  box-sizing: border-box; transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+input:focus { border: 1px solid var(--neon-azul); box-shadow: 0 0 10px rgba(0, 210, 255, 0.3); }
+
+/* --- NOVO: Estilos da Barra de Pesquisa --- */
+.search-container { margin-bottom: 15px; }
+.search-container input {
+  background: rgba(0, 0, 0, 0.5); /* Um pouco mais escura para destacar */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px; /* Bordas mais redondas para cara de 'busca' */
+  padding-left: 20px;
+}
+/* ------------------------------------------ */
+
+.password-generator-group { display: flex; gap: 8px; margin-bottom: 10px; }
+.password-generator-group input { margin-bottom: 0; }
+.btn-action-icon {
+  width: 45px; flex-shrink: 0; padding: 0; font-size: 20px; display: flex; justify-content: center;
+  align-items: center; background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 8px; cursor: pointer;
+  transition: all 0.2s;
+}
+.btn-action-icon:hover {
+  background: rgba(255, 255, 255, 0.15); box-shadow: 0 0 15px rgba(255, 255, 255, 0.2); transform: translateY(-2px);
+}
+
+.strength-meter-container {
+  width: 100%; height: 6px; background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px; margin-top: -2px; margin-bottom: 8px; overflow: hidden;
+}
+.strength-meter-bar {
+  height: 100%; width: 0%; border-radius: 4px;
+  transition: width 0.4s ease, background 0.4s ease, box-shadow 0.4s ease;
+}
+.strength-text {
+  font-size: 12px; text-align: left; margin-top: 0; margin-bottom: 15px;
+  font-weight: bold; transition: color 0.3s ease;
+}
+.strength-weak { background: #ff4d4d; box-shadow: 0 0 8px rgba(255, 77, 77, 0.6); }
+.strength-medium { background: #f39c12; box-shadow: 0 0 8px rgba(243, 156, 18, 0.6); }
+.strength-epic { background: var(--neon-roxo); box-shadow: 0 0 15px rgba(138, 43, 226, 0.9); }
+
+button {
+  width: 100%; padding: 14px; border: none; border-radius: 8px;
+  background: linear-gradient(45deg, var(--neon-roxo), var(--neon-azul));
+  color: white; font-weight: bold; font-size: 16px; cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+button:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(138, 43, 226, 0.4); }
+
+.btn-small { padding: 8px 12px; width: auto; font-size: 14px; }
+.btn-danger { background: linear-gradient(45deg, #ff4d4d, #b30000); }
+.btn-danger:hover { box-shadow: 0 5px 15px rgba(255, 77, 77, 0.4); }
+.btn-success { background: linear-gradient(45deg, #00b09b, #96c93d); }
+.btn-success:hover { box-shadow: 0 5px 15px rgba(0, 176, 155, 0.4); }
+.btn-edit { background: linear-gradient(45deg, #f39c12, #e67e22); }
+.btn-edit:hover { box-shadow: 0 5px 15px rgba(243, 156, 18, 0.4); }
+
+.form-panel { background: rgba(0,0,0,0.3); padding: 15px; border-radius: 8px; margin-bottom: 20px; }
+.form-actions { display: flex; gap: 10px; margin-top: 10px; }
+
+.password-list { max-height: 250px; overflow-y: auto; padding-right: 5px; }
+.password-item {
+  display: flex; justify-content: space-between; align-items: center;
+  background: rgba(255, 255, 255, 0.05); padding: 12px 15px; border-radius: 8px;
+  margin-bottom: 10px; text-align: left; border: 1px solid rgba(255, 255, 255, 0.05);
+}
+.password-info strong { display: block; font-size: 16px; color: var(--neon-azul); }
+.password-info span { font-size: 13px; color: #b3b3b3; }
+.action-buttons { display: flex; gap: 5px; } 
+
+.error-text { color: #ff4d4d; margin-top: 15px; margin-bottom: 0; }
+.hidden { display: none !important; }
+
+@keyframes fadeInSlideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOutSlideDown {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(-20px); }
+}
+
+.animate-in { animation: fadeInSlideUp 0.3s ease forwards; }
+.animate-out { animation: fadeOutSlideDown 0.3s ease forwards; }
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 10px; }

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meu Cofre</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="background-orbs"></div>
+    
+    <div id="login-screen" class="glass-container">
+      <h1>Cofre de Senhas</h1>
+      <p>Digite sua senha mestra para acessar</p>
+      
+      <div class="input-group">
+        <input type="password" id="master-password" placeholder="Senha Mestra..." />
+      </div>
+      
+      <button id="unlock-btn">Desbloquear</button>
+      <p id="error-msg" class="hidden error-text">Senha incorreta!</p>
+    </div>
+
+    <div id="dashboard-screen" class="glass-container hidden dashboard-wide">
+      
+      <div class="dashboard-header">
+        <div>
+          <h1>Suas Senhas</h1>
+          <p>Tudo seguro por aqui.</p>
+        </div>
+        <button id="show-add-form-btn" class="btn-small">+ Nova Senha</button>
+      </div>
+
+      <div class="search-container">
+        <input type="text" id="search-input" placeholder="🔍 Buscar por site, jogo ou usuário..." />
+      </div>
+      
+      <div id="add-password-form" class="hidden form-panel">
+        <input type="text" id="new-title" placeholder="Site/Serviço (ex: GitHub)" />
+        <input type="text" id="new-user" placeholder="Usuário ou E-mail" />
+        
+        <div class="password-generator-group">
+          <input type="password" id="new-pass" placeholder="Senha" style="flex-grow: 1;" />
+          <button id="toggle-visibility-btn" class="btn-action-icon" title="Mostrar/Esconder Senha">👁️</button>
+          <button id="generate-btn" class="btn-action-icon" title="Gerar senha forte aleatória">🎲</button>
+        </div>
+
+        <div id="strength-container" class="strength-meter-container hidden">
+          <div id="strength-bar" class="strength-meter-bar"></div>
+        </div>
+        <p id="strength-text" class="strength-text hidden">Crítico: Senha Fraca</p>
+
+        <div class="form-actions">
+          <button id="save-btn" class="btn-success">Salvar</button>
+          <button id="cancel-btn" class="btn-danger">Cancelar</button>
+        </div>
+      </div>
+
+      <div id="password-list" class="password-list">
+        </div>
+
+      <button id="lock-btn" class="btn-danger" style="margin-top: 20px;">Trancar Cofre</button>
+    </div>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
