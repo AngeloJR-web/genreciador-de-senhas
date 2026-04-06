@@ -6,16 +6,16 @@
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
-Um aplicativo desktop ultraleve, rápido e seguro para gerenciamento de senhas locais. Construído para oferecer uma experiência de usuário fluida com uma interface moderna em *Glassmorphism* e *Dark Mode*, garantindo que seus dados nunca saiam da sua máquina sem a devida criptografia.
+Um aplicativo desktop, rápido e seguro para gerenciamento de senhas locais. Construído para oferecer uma experiência de usuário fluida com uma interface moderna em *Glassmorphism* e *Dark Mode*, garantindo que seus dados nunca saiam da sua máquina sem a devida criptografia.
 
 > ⚠️ **Nota:** Este é um projeto de portfólio com foco em segurança da informação, manipulação de I/O em Rust e desenvolvimento de interfaces desktop com tecnologias web nativas.
 
 ## ✨ Funcionalidades Principais
 
-* **🔒 Criptografia de Nível Militar:** Todas as senhas são criptografadas localmente utilizando o algoritmo **AES-256** antes de serem salvas no disco rígido.
-* **🎲 Gerador de Senhas Fortes:** Criação de strings criptograficamente seguras utilizando a API nativa `window.crypto`.
-* **📊 Medidor de Força em Tempo Real:** Feedback visual (estilo barra de status) que avalia a complexidade da senha conforme ela é digitada.
-* **🔍 Busca Instantânea:** Filtro em tempo real para encontrar rapidamente credenciais específicas por título ou usuário.
+* **🔒 Criptografia:** Todas as senhas são criptografadas localmente utilizando o algoritmo **AES-256** antes de serem salvas no disco rígido.
+* **🎲 Gerador de Senhas:** Criação de strings criptograficamente seguras utilizando a API nativa `window.crypto`.
+* **📊 Medidor de Força da Senha:** Feedback visual que avalia a complexidade da senha conforme ela é digitada.
+* **🔍 Busca Instantânea:** Filtro para encontrar rapidamente credenciais específicas por título ou usuário.
 * **👁️ Visibilidade Alternável:** Opção de ocultar/revelar a senha durante a criação ou edição.
 * **📋 Cópia Rápida:** Botões de ação rápida para copiar senhas diretamente para a área de transferência do sistema operacional.
 * **🎨 UI/UX Polida:** Interface responsiva com animações suaves e design neon imersivo.
