@@ -6,7 +6,7 @@
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
-Um aplicativo desktop, rápido e seguro para gerenciamento de senhas locais. Construído para oferecer uma experiência de usuário fluida com uma interface moderna em *Glassmorphism* e *Dark Mode*, garantindo que seus dados nunca saiam da sua máquina sem a devida criptografia.
+Um aplicativo desktop, rápido e seguro para gerenciamento de senhas locais. garantindo que seus dados nunca saiam da sua máquina sem a devida criptografia.
 
 > ⚠️ **Nota:** Este é um projeto de portfólio com foco em segurança da informação, manipulação de I/O em Rust e desenvolvimento de interfaces desktop com tecnologias web nativas.
 
