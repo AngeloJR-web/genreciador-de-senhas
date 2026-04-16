@@ -18,7 +18,7 @@ Um aplicativo desktop, rápido e seguro para gerenciamento de senhas locais. gar
 * **🔍 Busca Instantânea:** Filtro para encontrar rapidamente credenciais específicas por título ou usuário.
 * **👁️ Visibilidade Alternável:** Opção de ocultar/revelar a senha durante a criação ou edição.
 * **📋 Cópia Rápida:** Botões de ação rápida para copiar senhas diretamente para a área de transferência do sistema operacional.
-* **🎨 UI/UX Polida:** Interface responsiva com animações suaves e design neon imersivo.
+* **🎨 UI/UX Polida:** Interface responsiva com animações suaves.
 
 ## 🛠️ Tecnologias Utilizadas
 
